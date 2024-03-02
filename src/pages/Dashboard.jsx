@@ -1,4 +1,4 @@
-import { redirect, useLoaderData } from 'react-router-dom'
+import { useLoaderData } from 'react-router-dom'
 import AddExpense from '../components/AddExpense'
 import CreateBudget from '../components/CreateBudget'
 import ExistingBudgets from '../components/ExistingBudgets'

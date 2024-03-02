@@ -18,7 +18,7 @@ const Error = () => {
           <span>Go Back</span>
         </Button>
         <Link
-          to="/dashboard"
+          to="/"
           className="flex gap-2 justify-center items-center justify-self-start text-lg text-white px-4 py-2 bg-[--color-primary] rounded-md"
         >
           <HomeIcon width={20} />

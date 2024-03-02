@@ -34,7 +34,6 @@ function RecentExpenses({ budgets, expenses }) {
             const budgetCategory = budgets.find(
               budget => budget.budgetCategoryId === budgetCategoryId
             )
-            console.log(expense)
 
             return (
               <tr

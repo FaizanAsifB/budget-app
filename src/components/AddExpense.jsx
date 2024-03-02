@@ -7,7 +7,7 @@ import Button from './ui/Button'
 import Input from './ui/Input'
 import Select from './ui/Select'
 
-function AddExpense({ budgets }) {
+function AddExpense({ budgets, isBudgetPage = false }) {
   const fetcher = useFetcher()
   const isSubmitting = fetcher.state === 'submitting'
 
@@ -41,6 +41,13 @@ function AddExpense({ budgets }) {
             inputMode="decimal"
           />
           <input type="hidden" name="_action" value="newExpense" />
+          {isBudgetPage && (
+            <input
+              type="hidden"
+              name="_budgetId"
+              value={budgets.budgetCategoryId}
+            />
+          )}
         </div>
         {budgets?.length > 0 && (
           <Select
