@@ -6,7 +6,7 @@ import {
   sortExpenses,
 } from '../helpers'
 
-function RecentExpenses({ expenses, budgets }) {
+function RecentExpenses({ budgets, expenses }) {
   const sortedExpenses = sortExpenses(expenses)
 
   return (
@@ -31,9 +31,10 @@ function RecentExpenses({ expenses, budgets }) {
               expenseId,
               budgetCategoryId,
             } = expense
-            const [budgetCategory] = budgets.filter(
+            const budgetCategory = budgets.find(
               budget => budget.budgetCategoryId === budgetCategoryId
             )
+            console.log(expense)
 
             return (
               <tr

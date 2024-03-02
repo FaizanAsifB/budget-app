@@ -1,4 +1,4 @@
-import { useLoaderData } from 'react-router-dom'
+import { redirect, useLoaderData } from 'react-router-dom'
 import AddExpense from '../components/AddExpense'
 import CreateBudget from '../components/CreateBudget'
 import ExistingBudgets from '../components/ExistingBudgets'
@@ -59,7 +59,6 @@ export async function dashboardAction({ request }) {
     const data = fetchData('expenses')
     const delData = data.filter(data => data.expenseId !== values.expenseId)
 
-    console.log(values, delData)
     saveToStorage('expenses', delData)
     return toast.success('Expense Deleted!')
   }
@@ -76,8 +75,8 @@ function Dashboard() {
   return !userName ? (
     <LoginScreen />
   ) : (
-    <div className="flex flex-col gap-6 w-full">
-      <h1 className="text-7xl font-bold">
+    <div className="flex flex-col w-full gap-6">
+      <h1 className="font-bold text-7xl">
         Welcome back,{' '}
         <span className="text-[--color-accent] capitalize">
           {userName.userName}

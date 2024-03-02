@@ -13,7 +13,7 @@ const Main = () => {
   return (
     <div className=" text-2xl grid grid-rows-layout grid-cols-layout h-screen text-[#121c1d] bg-[#f7fcfd]">
       <Header userName={userName} />
-      <main className="grid place-items-start row-start-2 col-start-2 p-8">
+      <main className="grid col-start-2 row-start-2 p-8 place-items-start">
         <Outlet />
       </main>
       <Footer />

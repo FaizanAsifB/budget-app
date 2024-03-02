@@ -9,7 +9,7 @@ const Error = () => {
   const navigate = useNavigate()
 
   return (
-    <div className="grid place-content-center place-items-center text-center h-screen gap-8 max-w-prose mx-auto">
+    <div className="grid h-screen gap-8 mx-auto text-center place-content-center place-items-center max-w-prose">
       <h1 className="text-3xl">Uh oh! We’ve got a problem.</h1>
       <p>{error.message || error.statusText}</p>
       <div className="flex gap-4">
@@ -18,7 +18,7 @@ const Error = () => {
           <span>Go Back</span>
         </Button>
         <Link
-          to="/"
+          to="/dashboard"
           className="flex gap-2 justify-center items-center justify-self-start text-lg text-white px-4 py-2 bg-[--color-primary] rounded-md"
         >
           <HomeIcon width={20} />
