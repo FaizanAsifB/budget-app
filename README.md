@@ -28,7 +28,7 @@ This project was built with the following technologies:
 - HTML
 - JavaScript
 - React
-- Tailwind
+- Tailwind CSS
 
 ## Installation
 
