@@ -26,10 +26,9 @@ Another major challenge was implementing a robust expense tracking system. This 
 This project was built with the following technologies:
 
 - HTML
-- CSS
 - JavaScript
 - React
-- Sass
+- Tailwind
 
 ## Installation
 
